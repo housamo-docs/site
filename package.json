@@ -1,0 +1,14 @@
+{
+  "name": "site",
+  "version": "0.0.1",
+  "description": "Document Site",
+  "main": "index.js",
+  "repository": "https://github.com/tokyo-afterschool-summoners/site",
+  "author": "HeskeyBaozi <hezhiyu233@foxmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "prettier": "1.17.0",
+    "typescript": "^3.4.4"
+  }
+}
