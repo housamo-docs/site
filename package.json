@@ -10,16 +10,21 @@
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "npm run build && npm run gh-pages",
+    "gh-pages": "cross-env node ./scripts/gh-pages.js",
     "type-check": "tsc --noEmit",
     "tsc": "tsc"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
+    "@types/gh-pages": "^2.0.0",
     "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
+    "chalk": "^2.4.2",
+    "cross-env": "^5.2.0",
     "gh-pages": "^2.0.1",
     "prettier": "1.17.0",
+    "ts-node": "^8.1.0",
     "typescript": "^3.4.4"
   },
   "dependencies": {
