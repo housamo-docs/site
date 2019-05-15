@@ -12,6 +12,7 @@
     "build": "gatsby build",
     "deploy": "npm run build && npm run gh-pages",
     "gh-pages": "cross-env node ./scripts/gh-pages.js",
+    "lint": "eslint **/*.ts **/*.tsx",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
@@ -19,21 +20,33 @@
     "@types/gh-pages": "^2.0.0",
     "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
     "chalk": "^2.4.2",
     "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
     "gh-pages": "^2.0.1",
     "prettier": "1.17.0",
     "typescript": "^3.4.4"
   },
   "dependencies": {
+    "@material-ui/core": "^4.0.0-beta.2",
+    "@material-ui/icons": "^4.0.0-beta.0",
     "@types/typography": "^0.16.2",
     "gatsby": "^2.3.25",
+    "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-typescript": "^2.0.12",
     "gatsby-plugin-typography": "^2.2.13",
     "gatsby-source-filesystem": "^2.0.33",
+    "gatsby-source-sql": "git+https://github.com/mrfunnyshoes/gatsby-source-sql.git",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "sqlite3": "^4.0.8",
     "typography": "^0.16.19",
     "typography-theme-fairy-gates": "^0.16.19"
   }
