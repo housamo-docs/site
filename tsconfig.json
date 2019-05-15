@@ -5,6 +5,11 @@
     "strict": true,
     "moduleResolution": "node",
     "jsx": "react",
-    "sourceMap": true
-  }
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": ["node_modules"]
 }

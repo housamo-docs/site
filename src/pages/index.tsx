@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import Container from '../components/container';
+import Container from '@/components/container';
 import Button from '@material-ui/core/Button';
 
 export const query = graphql`
