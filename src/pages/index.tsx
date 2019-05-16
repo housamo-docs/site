@@ -1,35 +1,36 @@
 import * as React from 'react';
-import { graphql } from 'gatsby';
-import Container from '@/components/container';
-import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import MuiLink from '@material-ui/core/Link';
+import ProTip from '@/components/ProTip';
+import Link from '@/components/Link';
 
-export const query = graphql`
-  query Test {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;
-
-const Index: React.SFC<{ data: any }> = ({ data }) => {
+function MadeWithLove() {
   return (
-    <Container>
-      <p>About {data.site.siteMetadata.title}</p>
-      <p>
-        What do I like to do?Lots of course but definitely enjoy building
-        {`a${data}`}
-        websites.
-      </p>
-      <pre>
-        <code>Hello World</code>
-      </pre>
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Built with love by the '}
+      <MuiLink color="inherit" href="https://material-ui.com/">
+        Material-UI
+      </MuiLink>
+      {' team.'}
+    </Typography>
+  );
+}
+
+export default function App() {
+  return (
+    <Container maxWidth="sm">
+      <Box my={4}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Gatsby v4-beta example
+        </Typography>
+        <Link to="/about" color="secondary">
+          Go to the about page
+        </Link>
+        <ProTip />
+        <MadeWithLove />
+      </Box>
     </Container>
   );
-};
-
-export default Index;
+}

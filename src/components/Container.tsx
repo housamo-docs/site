@@ -1,8 +1,14 @@
 import * as React from 'react';
-import containerStyles from './container.module.css';
+import styled from 'styled-components';
+
+const Div = styled.div`
+  margin: 3rem auto;
+  max-width: 600px;
+  background-color: aquamarine;
+`;
 
 const Container: React.SFC<{}> = ({ children }) => {
-  return <div className={containerStyles.container}>{children}</div>;
+  return <Div>{children}</Div>;
 };
 
 export default Container;

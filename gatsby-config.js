@@ -14,11 +14,13 @@ module.exports = {
     },
     'gatsby-plugin-typescript',
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: 'gatsby-plugin-styled-components',
       options: {
-        pathToConfigModule: 'src/utils/typography'
+        // Add any options here
       }
-    }
+    },
+    'gatsby-plugin-top-layout',
+    'gatsby-plugin-react-helmet'
     // {
     //   // Querying to a SQLite database
     //   resolve: `gatsby-source-sql`,
